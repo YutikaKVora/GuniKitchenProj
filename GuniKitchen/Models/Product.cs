@@ -4,7 +4,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GuniKitchen.Models
 {
-        [Table("Products")]
         public class Product
         {
             [Key]
