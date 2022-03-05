@@ -65,8 +65,16 @@ namespace GuniKitchen
 
             app.UseEndpoints(endpoints =>
             {
+                //Register the routing for controllers
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+
+            //Seed Database
+
+            ApplicationDbInitializer.Seed(app);
         }
     }
 }
